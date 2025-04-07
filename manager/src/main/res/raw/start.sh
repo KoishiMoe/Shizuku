@@ -1,7 +1,7 @@
 #!/system/bin/sh
 
 SOURCE_PATH="%%%STARTER_PATH%%%"
-STARTER_PATH="/data/local/tmp/shizuku_starter"
+STARTER_PATH="/data/local/tmp/szk_starter"
 
 echo "info: start.sh begin"
 
@@ -42,9 +42,9 @@ if [ -f $STARTER_PATH ]; then
     $STARTER_PATH "$1"
     result=$?
     if [ ${result} -ne 0 ]; then
-        echo "info: shizuku_starter exit with non-zero value $result"
+        echo "info: szk_starter exit with non-zero value $result"
     else
-        echo "info: shizuku_starter exit with 0"
+        echo "info: szk_starter exit with 0"
     fi
 else
     echo "Starter file not exist, please open Shizuku and try again."

@@ -184,8 +184,8 @@ int starter_main(int argc, char *argv[]) {
     se::init();
 
     if (uid == 0) {
-        chown("/data/local/tmp/shizuku_starter", 2000, 2000);
-        se::setfilecon("/data/local/tmp/shizuku_starter", "u:object_r:shell_data_file:s0");
+        chown("/data/local/tmp/szk_starter", 2000, 2000);
+        se::setfilecon("/data/local/tmp/szk_starter", "u:object_r:shell_data_file:s0");
         switch_cgroup();
 
         int sdkLevel = 0;
@@ -215,11 +215,11 @@ int starter_main(int argc, char *argv[]) {
         }
     }
 
-    mkdir("/data/local/tmp/shizuku", 0707);
-    chmod("/data/local/tmp/shizuku", 0707);
+    mkdir("/data/local/tmp/szk", 0707);
+    chmod("/data/local/tmp/szk", 0707);
     if (uid == 0) {
-        chown("/data/local/tmp/shizuku", 2000, 2000);
-        se::setfilecon("/data/local/tmp/shizuku", "u:object_r:shell_data_file:s0");
+        chown("/data/local/tmp/szk", 2000, 2000);
+        se::setfilecon("/data/local/tmp/szk", "u:object_r:shell_data_file:s0");
     }
 
     printf("info: starter begin\n");
@@ -294,7 +294,7 @@ int main(int argc, char **argv) {
 
     LOGD("applet %s", base.data());
 
-    constexpr const char *applet_names[] = {"shizuku_starter", nullptr};
+    constexpr const char *applet_names[] = {"szk_starter", nullptr};
 
     for (int i = 0; applet_names[i]; ++i) {
         if (base == applet_names[i]) {

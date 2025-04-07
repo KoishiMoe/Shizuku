@@ -39,7 +39,7 @@ public class ShizukuConfigManager extends ConfigManager {
 
     private static final long WRITE_DELAY = 10 * 1000;
 
-    private static final File FILE = new File("/data/local/tmp/shizuku/shizuku.json");
+    private static final File FILE = new File("/data/local/tmp/szk/shizuku.json");
     private static final AtomicFile ATOMIC_FILE = new AtomicFile(FILE);
 
     public static ShizukuConfig load() {
